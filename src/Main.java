@@ -8,6 +8,7 @@ public class Main {
         Controller controller = new Controller(dataBase);
         //dataBase.printDatabBase();
 
+        String searchName;
         int brugerValg = 0;
 
 
@@ -15,6 +16,7 @@ public class Main {
             System.out.println("velkommen til superhelte academiet");
             System.out.println("1. opret superhelt");
             System.out.println("2. vis superhelt");
+            System.out.println("3. find superhelt");
             System.out.println("9. afslut program");
 
             brugerValg = keyboard.nextInt();
@@ -44,9 +46,23 @@ public class Main {
             if (brugerValg == 2) {
                 System.out.println("superhelte i academiet");
                 for (SuperHero superHero : controller.hentSuperHero()) {
-                    System.out.println(superHero);
+                    System.out.println(superHero.getName()+ " " + superHero.getRealName() + " "+ superHero.getSuperPower() + " " +superHero.getYearCreated() + " " +superHero.getIsHuman()+" "+superHero.getStrength());
                 }
             }
+
+            if (brugerValg == 3){
+                System.out.println("find din superhelt");
+                searchName = keyboard.next();
+                for (SuperHero superHero: controller.hentSuperHero()
+                ) {
+                    if (superHero.getName().contains(searchName)){
+                        System.out.println("superhelte fundet" + superHero.getName()+" "+superHero.getRealName()+" "+superHero.getSuperPower()+" "+superHero.getYearCreated()+" "+superHero.getIsHuman()+" "+superHero.getStrength());
+                    }
+
+                }
             }
+
+            }
+
         }
     }

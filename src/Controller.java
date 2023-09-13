@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Controller {
     private DataBase dataBase = new DataBase();
     private ArrayList<SuperHero> superHeroListe = new ArrayList<SuperHero>();
+
    public Controller(DataBase dataBase){
         this.dataBase = dataBase;
     }
