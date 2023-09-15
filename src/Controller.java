@@ -15,4 +15,13 @@ public class Controller {
     public ArrayList<SuperHero> hentSuperHero(){
         return dataBase.hentSuperHero();
     }
+
+    public void editSuperHero(String søgNavn, String nytNavn, String nytRigtigNavn, String nySuperPower, int nytÅrOprettet, String nyIsHuman, int nytStrength){
+       dataBase.editSuperHero(søgNavn,nytNavn, nytRigtigNavn, nySuperPower, nytÅrOprettet, nyIsHuman, nytStrength);
+    }
+
+    public void visSuperHelt(String søgNavn){
+       dataBase.visSuperHelt(søgNavn);
+    }
+
 }

@@ -37,6 +37,34 @@ public class SuperHero {
     public int getStrength(){
         return strength;
     }
+public void setName(String name){
+        this.name = name;
+}
+    public void setRealName(String realName){
+        this.realName = realName;
+    }
+    public void setSuperPower(String superPower){
+        this.superPower = superPower;
+    }
+    public void setYearCreated(int yearCreated){
+        this.yearCreated = yearCreated;
+    }
+    public void setIsHuman(String isHuman){
+        this.isHuman = isHuman;
+    }
+    public void setStrength(int strength){
+        this.strength = strength;
+    }
 
-
+    @Override
+    public String toString() {
+        return "SuperHero{" +
+                "name='" + name + '\'' +
+                ", realName='" + realName + '\'' +
+                ", superPower='" + superPower + '\'' +
+                ", yearCreated=" + yearCreated +
+                ", isHuman='" + isHuman + '\'' +
+                ", strength=" + strength +
+                '}';
+    }
 }
