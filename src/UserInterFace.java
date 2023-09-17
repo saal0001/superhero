@@ -38,18 +38,19 @@ public class UserInterFace {
 
             System.out.println("hvor mange helte vil du lave ( min. 1)");
             if (!keyboard.hasNextInt()){
-                String text = keyboard.next();
+                String text = keyboard.nextLine();
                 System.out.println(text +" er ikke et gyldigt tegn prøv igen");
             }
             int numberOfHeroes = keyboard.nextInt();
+            keyboard.nextLine();
             for (int i = 0; i < numberOfHeroes; i++) {
                 System.out.println("HELT " + (i + 1) + " ud af " + numberOfHeroes);
                 System.out.println("hvad er navnet på din superhelt");
-                String name = keyboard.next();
+                String name = keyboard.nextLine();
                 System.out.println("hvad er din superhelts rigtige navn");
-                String realName = keyboard.next();
+                String realName = keyboard.nextLine();
                 System.out.println("hvad er din superhelts superkraft");
-                String superPower = keyboard.next();
+                String superPower = keyboard.nextLine();
                 System.out.println("hvornår blev din superhelt født");
                 if (!keyboard.hasNextInt()){
                     String text = keyboard.next();
@@ -76,7 +77,8 @@ public class UserInterFace {
         }
             if (brugerValg == 3){
                 System.out.println("find din superhelt");
-                searchName = keyboard.next();
+                keyboard.nextLine();
+                searchName = keyboard.nextLine();
                 for (SuperHero superHero: controller.hentSuperHero()
                 ) {
                     if (superHero.getName().contains(searchName)){
@@ -88,14 +90,14 @@ public class UserInterFace {
         }
             if (brugerValg == 4){
                 System.out.println("søg efter superhelt");
-                String søgNavn = keyboard.next();
+                String søgNavn = keyboard.nextLine();
                 controller.visSuperHelt(søgNavn);
                 System.out.println("hvad skal superheltens nye navn være");
-                String nytNavn = keyboard.next();
+                String nytNavn = keyboard.nextLine();
                 System.out.println("hvad skal superheltens nye rigtige navn være");
-                String nytRigtigNavn = keyboard.next();
+                String nytRigtigNavn = keyboard.nextLine();
                 System.out.println("hvad skal superheltens nye super kræft være");
-                String nySuperPower = keyboard.next();
+                String nySuperPower = keyboard.nextLine();
                 System.out.println("hvad skal superheltens nye fødeselsår være");
                 if (!keyboard.hasNextInt()){
                     String text = keyboard.next();
