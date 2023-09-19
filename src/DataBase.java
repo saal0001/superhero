@@ -39,6 +39,16 @@ public class DataBase {
         }
         return null;
     }
+
+    public SuperHero removeSuperHero(String søgNavn){
+        for (SuperHero superHero:superheroListe){
+            if (superHero.getName().equals(søgNavn)){
+               return superheroListe.remove(superHero);
+            }
+        }
+        return null;
+    }
+
 }
 
 
